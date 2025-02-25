@@ -56,46 +56,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-const form = document.querySelector('.contact-form');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+// const form = document.querySelector('.contact-form');
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const name = document.getElementById('name').value;
+//     const email = document.getElementById('email').value;
+//     const message = document.getElementById('message').value;
 
-    if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
+//     if (!name || !email || !message) {
+//         alert('Please fill in all fields');
+//         return;
+//     }
 
-    if (!isValidEmail(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
+//     if (!isValidEmail(email)) {
+//         alert('Please enter a valid email address');
+//         return;
+//     }
 
-    alert('Message sent successfully!');
-    form.reset();
-});
-function isValidEmail(email) {
+//     alert('Message sent successfully!');
+//     form.reset();
+// });
+// function isValidEmail(email) {
    
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-function sendEmail() {
-    const email = document.querySelector('email').value;
-    const subject = document.querySelector('subject').value;
-    const message = document.getElementById('message').value;
+//     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// }
+// function sendEmail() {
+//     const email = document.querySelector('email').value;
+//     const subject = document.querySelector('subject').value;
+//     const message = document.getElementById('message').value;
 
-    if (isValidEmail(email)) {
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-        window.location.href = mailtoLink;
-    } else {
-        alert("Iltimos, to'g'ri email manzilini kiriting.");
-    }
-}
+//     if (isValidEmail(email)) {
+//         const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+//         window.location.href = mailtoLink;
+//     } else {
+//         alert("Iltimos, to'g'ri email manzilini kiriting.");
+//     }
+// }
 
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+// function isValidEmail(email) {
+//     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// }
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 function showSlide(index) {
@@ -117,12 +117,6 @@ const observer = new IntersectionObserver((entries) => {
 docment.querySelectorAll('.portfolio-item').forEach(item => {
     observer.observe(item);
 });
-
-
-
-
-
-
 
 
 
